@@ -1,7 +1,8 @@
 [
-  {"id": 1, "title": "Sber", "value1": 32, "value2": 47, "value3": 152},
-  {"id": 2, "title": "Alfa", "value1": 78, "value2": 55, "value3": 65},
-  {"id": 3, "title": "SKB", "value1": 22, "value2": 37, "value3": 234},
-  {"id": 4, "title": "VTB", "value1": 73, "value2": 91, "value3": 54},
-  {"id": 5, "title": "GPN", "value1": 103, "value2": 35, "value3": 278}
+  {"id": "IDSber", "title": "Sber", "value1": 32, "value2": 47, "value3": 152},
+  {"id": "IDAlfa", "title": "Alfa", "value1": 78, "value2": 55, "value3": 65},
+  {"id": "IDSKB", "title": "SKB", "value1": 22, "value2": 37, "value3": 234},
+  {"id": "IDVTB", "title": "VTB", "value1": 73, "value2": 91, "value3": 54},
+  {"id": "IDGPN", "title": "GPN", "value1": 103, "value2": 35, "value3": 278},
+  {"id": "IDTOTAL", "title": "Total", "value1": 308, "value2": 265, "value3": 783}
 ]
