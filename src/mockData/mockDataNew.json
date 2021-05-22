@@ -1,0 +1,186 @@
+[
+  {
+    "20211": [
+      {
+        "id": "IDSber",
+        "title": "Sber",
+        "value1": 132,
+        "value2": 147,
+        "value3": 152
+      },
+      {
+        "id": "IDAlfa",
+        "title": "Alfa",
+        "value1": 178,
+        "value2": 155,
+        "value3": 165
+      },
+      {
+        "id": "IDSKB",
+        "title": "SKB",
+        "value1": 122,
+        "value2": 137,
+        "value3": 1234
+      },
+      {
+        "id": "IDVTB",
+        "title": "VTB",
+        "value1": 173,
+        "value2": 191,
+        "value3": 154
+      },
+      {
+        "id": "IDGPN",
+        "title": "GPN",
+        "value1": 1103,
+        "value2": 135,
+        "value3": 1278
+      },
+      {
+        "id": "IDTOTAL",
+        "title": "Total",
+        "value1": 1308,
+        "value2": 1265,
+        "value3": 1783
+      }
+    ]
+  },
+  {
+    "20212": [
+      {
+        "id": "IDSber",
+        "title": "Sber",
+        "value1": 232,
+        "value2": 247,
+        "value3": 252
+      },
+      {
+        "id": "IDAlfa",
+        "title": "Alfa",
+        "value1": 278,
+        "value2": 255,
+        "value3": 265
+      },
+      {
+        "id": "IDSKB",
+        "title": "SKB",
+        "value1": 222,
+        "value2": 237,
+        "value3": 2234
+      },
+      {
+        "id": "IDVTB",
+        "title": "VTB",
+        "value1": 273,
+        "value2": 291,
+        "value3": 254
+      },
+      {
+        "id": "IDGPN",
+        "title": "GPN",
+        "value1": 2103,
+        "value2": 235,
+        "value3": 2278
+      },
+      {
+        "id": "IDTOTAL",
+        "title": "Total",
+        "value1": 2308,
+        "value2": 2265,
+        "value3": 2783
+      }
+    ]
+  },
+  {
+    "20213": [
+      {
+        "id": "IDSber",
+        "title": "Sber",
+        "value1": 332,
+        "value2": 347,
+        "value3": 352
+      },
+      {
+        "id": "IDAlfa",
+        "title": "Alfa",
+        "value1": 378,
+        "value2": 355,
+        "value3": 365
+      },
+      {
+        "id": "IDSKB",
+        "title": "SKB",
+        "value1": 322,
+        "value2": 337,
+        "value3": 3234
+      },
+      {
+        "id": "IDVTB",
+        "title": "VTB",
+        "value1": 373,
+        "value2": 391,
+        "value3": 354
+      },
+      {
+        "id": "IDGPN",
+        "title": "GPN",
+        "value1": 3103,
+        "value2": 335,
+        "value3": 3278
+      },
+      {
+        "id": "IDTOTAL",
+        "title": "Total",
+        "value1": 3308,
+        "value2": 3265,
+        "value3": 3783
+      }
+    ]
+  },
+  {
+    "20214": [
+      {
+        "id": "IDSber",
+        "title": "Sber",
+        "value1": 432,
+        "value2": 447,
+        "value3": 452
+      },
+      {
+        "id": "IDAlfa",
+        "title": "Alfa",
+        "value1": 478,
+        "value2": 455,
+        "value3": 465
+      },
+      {
+        "id": "IDSKB",
+        "title": "SKB",
+        "value1": 422,
+        "value2": 437,
+        "value3": 4234
+      },
+      {
+        "id": "IDVTB",
+        "title": "VTB",
+        "value1": 473,
+        "value2": 491,
+        "value3": 454
+      },
+      {
+        "id": "IDGPN",
+        "title": "GPN",
+        "value1": 4103,
+        "value2": 435,
+        "value3": 4278
+      },
+      {
+        "id": "IDTOTAL",
+        "title": "Total",
+        "value1": 4308,
+        "value2": 4265,
+        "value3": 4783
+      }
+    ]
+  }
+]
