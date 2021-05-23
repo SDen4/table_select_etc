@@ -13,7 +13,8 @@ const lastData = MOCK_DATA_NEW.find((item) => item.id === maxPeriodIDStr);
 
 const initialState: any = {
   //@ts-ignore
-  data: lastData[maxPeriodIDStr],
+  dataForTable: lastData[maxPeriodIDStr],
+  dataForFilter: MOCK_DATA_NEW,
 };
 
 export const rootReducer = (state = initialState, action: any) => {

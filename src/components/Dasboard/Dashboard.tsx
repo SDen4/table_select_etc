@@ -4,29 +4,28 @@ import { connect } from 'react-redux';
 import Filter from '../Filter';
 import Table from '../Table';
 
-// import MOCK_DATA from '../../mockData/mockData.json';
-import MOCK_DATA_NEW from '../../mockData/mockDataNew.json';
+import { DashboardProps } from './types';
 
-interface DashboardProps {
-  dataFromStore: any;
-}
-
-const Dashboard: React.FC<DashboardProps> = ({ dataFromStore }) => {
-  console.log(dataFromStore);
+const Dashboard: React.FC<DashboardProps> = ({
+  dataFromStoreForTable,
+  dataFromStoreForFilter,
+}) => {
+  console.log(dataFromStoreForTable);
 
   return (
     <div>
       Dashboard
-      <Filter data={MOCK_DATA_NEW} />
+      <Filter data={dataFromStoreForFilter} />
       <hr />
-      <Table tableData={dataFromStore} />
+      <Table tableData={dataFromStoreForTable} />
     </div>
   );
 };
 
 function mapStateToProps(state: any) {
   return {
-    dataFromStore: state.data,
+    dataFromStoreForTable: state.dataForTable,
+    dataFromStoreForFilter: state.dataForFilter,
   };
 }
 
