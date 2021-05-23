@@ -10,8 +10,6 @@ const Dashboard: React.FC<DashboardProps> = ({
   dataFromStoreForTable,
   dataFromStoreForFilter,
 }) => {
-  console.log(dataFromStoreForTable);
-
   return (
     <div>
       Dashboard

@@ -1,14 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
+import { changePeriod } from '../../redux/actions';
+
 import { FilterProps } from './types';
 
 import { useStyles } from './style';
 
-const Filter: React.FC<FilterProps> = ({ data }) => {
+const Filter: React.FC<FilterProps> = ({
+  data,
+  dataFromStoreForTable,
+  dataFromStoreForFilter,
+  changePeriod,
+}) => {
   const [content, setContent] = React.useState(data[data.length - 1].id);
 
   const classes = useStyles();
@@ -16,6 +24,7 @@ const Filter: React.FC<FilterProps> = ({ data }) => {
   const handleChange = (event: any) => {
     event.preventDefault();
     setContent(event.target.value);
+    changePeriod(event.target.value);
   };
 
   return (
@@ -41,4 +50,15 @@ const Filter: React.FC<FilterProps> = ({ data }) => {
   );
 };
 
-export default Filter;
+const mapDispatchToProps = {
+  changePeriod,
+};
+
+function mapStateToProps(state: any) {
+  return {
+    dataFromStoreForTable: state.dataForTable,
+    dataFromStoreForFilter: state.dataForFilter,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);

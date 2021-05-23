@@ -1,4 +1,5 @@
 import MOCK_DATA_NEW from '../mockData/mockDataNew.json';
+import { CHANGE_PERIOD } from './constants';
 
 // max value of periods
 const maxPeriodIDStr: string = String(
@@ -9,14 +10,25 @@ const maxPeriodIDStr: string = String(
 );
 
 // searh data by max of period
-const lastData = MOCK_DATA_NEW.find((item) => item.id === maxPeriodIDStr);
+const lastData: any = MOCK_DATA_NEW.find((item) => item.id === maxPeriodIDStr);
 
 const initialState: any = {
-  //@ts-ignore
   dataForTable: lastData[maxPeriodIDStr],
   dataForFilter: MOCK_DATA_NEW,
 };
 
 export const rootReducer = (state = initialState, action: any) => {
-  return state;
+  switch (action.type) {
+    case CHANGE_PERIOD:
+      const newData: any = MOCK_DATA_NEW.find(
+        (item) => item.id === action.payload,
+      );
+      return {
+        ...state,
+        dataForTable: newData[action.payload],
+        dataForFilter: MOCK_DATA_NEW,
+      };
+    default:
+      return state;
+  }
 };
