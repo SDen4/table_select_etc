@@ -4,16 +4,18 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
+import { FilterProps } from './types';
+
 import { useStyles } from './style';
 
-const Filter: React.FC = () => {
+const Filter: React.FC<FilterProps> = ({ data }) => {
+  const [content, setContent] = React.useState(data[data.length - 1].id);
+
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
 
   const handleChange = (event: any) => {
     event.preventDefault();
-    setAge(event.target.value);
-    console.log(age);
+    setContent(event.target.value);
   };
 
   return (
@@ -23,13 +25,16 @@ const Filter: React.FC = () => {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
+          value={content}
           onChange={handleChange}
         >
-          <MenuItem value={20211}>1 квартал 2021</MenuItem>
-          <MenuItem value={20212}>2 квартал 2021</MenuItem>
-          <MenuItem value={20213}>3 квартал 2021</MenuItem>
-          <MenuItem value={20214}>4 квартал 2021</MenuItem>
+          {data.map((item) => {
+            return (
+              <MenuItem value={item.id} key={item.id}>
+                {item.periodName}
+              </MenuItem>
+            );
+          })}
         </Select>
       </FormControl>
     </div>
