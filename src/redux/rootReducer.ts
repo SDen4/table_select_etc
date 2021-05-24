@@ -32,3 +32,5 @@ export const rootReducer = (state = initialState, action: any) => {
       return state;
   }
 };
+
+export type AppStateType = ReturnType<typeof rootReducer>;

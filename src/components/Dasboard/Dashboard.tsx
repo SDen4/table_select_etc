@@ -1,30 +1,27 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { AppStateType } from '../../redux/rootReducer';
 
 import Filter from '../Filter';
 import Table from '../Table';
 
-import { DashboardProps } from './types';
+const Dashboard: React.FC = () => {
+  const dataForTable = useSelector<AppStateType, any>(
+    (store) => store.dataForTable,
+  );
 
-const Dashboard: React.FC<DashboardProps> = ({
-  dataFromStoreForTable,
-  dataFromStoreForFilter,
-}) => {
+  const dataForFilter = useSelector<AppStateType, any>(
+    (store) => store.dataForFilter,
+  );
+
   return (
     <div>
       Dashboard
-      <Filter data={dataFromStoreForFilter} />
+      <Filter data={dataForFilter} />
       <hr />
-      <Table tableData={dataFromStoreForTable} />
+      <Table tableData={dataForTable} />
     </div>
   );
 };
 
-function mapStateToProps(state: any) {
-  return {
-    dataFromStoreForTable: state.dataForTable,
-    dataFromStoreForFilter: state.dataForFilter,
-  };
-}
-
-export default connect(mapStateToProps)(Dashboard);
+export default Dashboard;
