@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -15,16 +15,17 @@ const Filter: React.FC<FilterProps> = ({
   data,
   dataFromStoreForTable,
   dataFromStoreForFilter,
-  changePeriod,
 }) => {
   const [content, setContent] = React.useState(data[data.length - 1].id);
+  const dispatch = useDispatch();
 
   const classes = useStyles();
 
   const handleChange = (event: any) => {
     event.preventDefault();
     setContent(event.target.value);
-    changePeriod(event.target.value);
+
+    dispatch(changePeriod(event.target.value));
   };
 
   return (
@@ -50,10 +51,6 @@ const Filter: React.FC<FilterProps> = ({
   );
 };
 
-const mapDispatchToProps = {
-  changePeriod,
-};
-
 function mapStateToProps(state: any) {
   return {
     dataFromStoreForTable: state.dataForTable,
@@ -61,4 +58,4 @@ function mapStateToProps(state: any) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default connect(mapStateToProps)(Filter);
