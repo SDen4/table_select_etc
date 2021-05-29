@@ -11,15 +11,62 @@ const Table: React.FC<TableProps> = ({ tableData }) => {
       {
         Header: 'Bank',
         accessor: 'title',
+        Cell: (cell: any) => {
+          let index = Number(cell.row.id) + 1;
+          return (
+            <div
+              style={
+                index === tableData.length
+                  ? { fontWeight: 'bold', backgroundColor: 'orange' }
+                  : {}
+              }
+            >
+              {cell.value}
+            </div>
+          );
+        },
+        // <div style={{ fontWeight: 'bold' }}>cell.rows[rows.length - 1]</div>
       },
-      { Header: 'VALUE 1', accessor: 'value1' },
-      { Header: 'VALUE 2', accessor: 'value2' },
+      {
+        Header: 'VALUE 1',
+        accessor: 'value1',
+        Cell: (cell: any) => {
+          let index = Number(cell.row.id) + 1;
+          return (
+            <div
+              style={index === tableData.length ? { fontWeight: 'bold' } : {}}
+            >
+              {cell.value}
+            </div>
+          );
+        },
+      },
+      {
+        Header: 'VALUE 2',
+        accessor: 'value2',
+        Cell: (cell: any) => {
+          let index = Number(cell.row.id) + 1;
+          return (
+            <div
+              style={index === tableData.length ? { fontWeight: 'bold' } : {}}
+            >
+              {cell.value}
+            </div>
+          );
+        },
+      },
       {
         Header: 'VALUE 3',
         accessor: 'value3',
         Cell: (cell: any) => {
-          console.log(cell.rows[rows.length - 1].cells); // Массив последней строки
-          return cell.value + '%';
+          let index = Number(cell.row.id) + 1;
+          return (
+            <div
+              style={index === tableData.length ? { fontWeight: 'bold' } : {}}
+            >
+              {cell.value + '%'}
+            </div>
+          );
         },
       },
     ],
